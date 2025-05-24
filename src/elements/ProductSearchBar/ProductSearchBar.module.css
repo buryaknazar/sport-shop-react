@@ -1,0 +1,50 @@
+.productSearchBar {
+	display: flex;
+	align-items: center;
+	border-radius: 0.5rem;
+	border: 1px solid var(--search-input-border-color);
+	height: 2.3rem;
+	padding: 0.3rem;
+	transition: border-color 0.1s ease;
+}
+
+.productSearchBar:hover {
+	border-color: var(--search-input-hover-border-color);
+}
+
+.productSearchBar:focus-within {
+	border-color: var(--search-input-focus-border-color);
+}
+
+.searchInput {
+	flex: 1;
+	border: none;
+	padding: 0 0.5rem;
+	background-color: transparent;
+	color: var(--search-input-text-color);
+	font-size: 1rem;
+}
+
+.searchInput::placeholder {
+	color: var(--search-input-placeholder-color);
+}
+
+.searchButton {
+	flex-shrink: 0;
+	width: 40px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: var(--search-input-button-bg-color);
+	border: none;
+	border-radius: 0.5rem;
+	color: var(--search-input-text-color);
+	cursor: pointer;
+	height: 100%;
+	padding: 0;
+	transition: background-color 0.1s ease;
+}
+
+.searchButton:hover {
+	background-color: var(--search-input-button-hover-bg-color);
+}

@@ -1,0 +1,26 @@
+:root {
+	--header-height: 60px;
+	--header-background-color: #0f172b;
+
+	--nav-menu-item-text-color: #90a1b9;
+	--nav-menu-item-active-text-color: #f8fafc;
+	--nav-menu-item-font-weight: 500;
+	--nav-menu-item-hover-underline-color: #f8fafc;
+	--nav-menu-item-hover-text-color: #f8fafc;
+
+	--search-input-border-color: #90a1b9;
+	--search-input-hover-border-color: #f8fafc;
+	--search-input-focus-border-color: #f8fafc;
+	--search-input-placeholder-color: #90a1b9;
+	--search-input-text-color: #f8fafc;
+	--search-input-button-bg-color: #314158;
+	--search-input-button-hover-bg-color: #90a1b9;
+
+	--header-action-button-border-color: #90a1b9;
+	--header-action-button-text-color: #f8fafc;
+	--header-action-button-hover-border-color: #f8fafc;
+	--header-action-button-hover-text-color: #f8fafc;
+
+	--background-color: #0f172b;
+	--text-color: #90a1b9;
+}

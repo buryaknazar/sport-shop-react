@@ -1,0 +1,49 @@
+header {
+	width: 100%;
+	height: var(--header-height);
+	background-color: var(--header-background-color);
+}
+
+.headerContainer {
+	margin: 0 auto;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0 1.5rem;
+}
+
+.headerActions {
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+	height: 2.3rem;
+}
+
+.cartAction,
+.userAction {
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.userProfileButton {
+	height: 100%;
+	width: 35px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 0;
+	background-color: transparent;
+	border: 1px solid var(--header-action-button-border-color);
+	border-radius: 0.5rem;
+	color: var(--header-action-button-text-color);
+	transition: border-color 0.1s ease;
+}
+
+.userProfileButton:hover {
+	border-color: var(--header-action-button-hover-border-color);
+	color: var(--header-action-button-hover-text-color);
+}
