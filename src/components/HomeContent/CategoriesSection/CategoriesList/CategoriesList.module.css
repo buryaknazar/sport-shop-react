@@ -1,0 +1,44 @@
+.categoriesSectionHeader {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.title {
+	font-size: clamp(1.5rem, 2vw, 3rem);
+	font-weight: 600;
+	color: var(--primary-title-color);
+	letter-spacing: 1px;
+}
+
+.categoriesList {
+	display: flex;
+	align-items: center;
+	scroll-behavior: smooth;
+	overflow: hidden;
+	width: 100%;
+	gap: 1rem;
+}
+
+.sliderButtons {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+}
+
+.sliderBtn {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: transparent;
+	border: 1px solid var(--text-color);
+	color: var(--text-color);
+	padding: 0.3rem;
+	border-radius: 50%;
+	cursor: pointer;
+	transition: border-color 0.2s ease;
+}
+
+.sliderBtn:hover {
+	border-color: var(--primary-title-color);
+}
