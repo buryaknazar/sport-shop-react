@@ -2,13 +2,12 @@ import axios from 'axios';
 
 const API_BASE_URL = 'http://localhost:8080/api';
 
-export const fetchFilteredProducts = async (filter, page = 0, size = 10) => {
+export const login = async credentials => {
 	try {
 		const response = await axios.post(
-			`${API_BASE_URL}/products/filter`,
-			filter,
+			`${API_BASE_URL}/auth/login`,
+			credentials,
 			{
-				params: { page, size },
 				headers: {
 					'Content-Type': 'application/json',
 				},
@@ -16,7 +15,7 @@ export const fetchFilteredProducts = async (filter, page = 0, size = 10) => {
 		);
 		return response.data;
 	} catch (error) {
-		console.error('Error fetching filtered products:', error);
+		console.error('Error during login:', error);
 		throw error;
 	}
 };

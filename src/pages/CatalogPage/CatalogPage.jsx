@@ -1,10 +1,10 @@
 import MainLayout from '../../layouts/MainLayout';
+import CatalogContent from '../../components/CatalogContent/CatalogContent';
 
 const CatalogPage = () => {
 	return (
 		<MainLayout>
-			<h1>Catalog</h1>
-			<p>Welcome to the catalog page!</p>
+			<CatalogContent />
 		</MainLayout>
 	);
 };

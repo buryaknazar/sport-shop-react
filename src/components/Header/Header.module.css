@@ -29,22 +29,3 @@ header {
 	align-items: center;
 	justify-content: center;
 }
-
-.userProfileButton {
-	height: 100%;
-	width: 35px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	padding: 0;
-	background-color: transparent;
-	border: 1px solid var(--header-action-button-border-color);
-	border-radius: 0.5rem;
-	color: var(--header-action-button-text-color);
-	transition: border-color 0.1s ease;
-}
-
-.userProfileButton:hover {
-	border-color: var(--header-action-button-hover-border-color);
-	color: var(--header-action-button-hover-text-color);
-}

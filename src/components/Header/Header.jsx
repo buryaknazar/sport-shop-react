@@ -1,11 +1,11 @@
 import NavMenu from './NavMenu/NavMenu';
 import ProductSearchBar from '../../elements/ProductSearchBar/ProductSearchBar';
 import CartButton from './CartButton/CartButton';
+import UserProfileButton from './UserProfileButton/UserProfileButton';
 
 import styles from './Header.module.css';
 
 import logo from '../../assets/images/logo.svg';
-import { User } from 'lucide-react';
 
 const Header = () => {
 	return (
@@ -29,9 +29,7 @@ const Header = () => {
 					</div>
 
 					<div className={styles.userAction}>
-						<button className={styles.userProfileButton}>
-							<User size={20} />
-						</button>
+						<UserProfileButton />
 					</div>
 				</div>
 			</div>

@@ -19,6 +19,7 @@ body {
 	color: #222;
 	background-color: var(--background-color);
 	line-height: 1.6;
+	letter-spacing: 0.8px;
 	min-height: 100vh;
 }
 

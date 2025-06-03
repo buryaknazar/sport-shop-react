@@ -9,6 +9,9 @@
 	--nav-menu-item-hover-underline-color: #f8fafc;
 	--nav-menu-item-hover-text-color: #f8fafc;
 
+	--user-action-button-menu-hover-bg-color: #141e38;
+	--user-action-button-menu-bg-color: #0f172b;
+
 	--search-input-border-color: #90a1b9;
 	--search-input-hover-border-color: #f8fafc;
 	--search-input-focus-border-color: #f8fafc;
@@ -29,8 +32,15 @@
 	--category-card-bg-color: #90a1b9;
 	--category-card-btn-text-color: #00bba7;
 
+	--filter-section-border-color: #314158;
+
+	--product-card-border-color: #314158;
+	--product-card-btn-border-color: #00bba7;
+	--product-card-btn-hover-text-color: #0f172b;
+
 	--background-color: #0f172b;
 	--primary-text-color: #f8fafc;
 	--primary-title-color: #00bba7;
 	--text-color: #90a1b9;
+	--primary-border-color: #90a1b9;
 }

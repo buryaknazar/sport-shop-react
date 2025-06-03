@@ -1,0 +1,11 @@
+.sliderWrapper {
+	width: 100%;
+	padding: 0 10px;
+}
+
+.values {
+	display: flex;
+	justify-content: space-between;
+	font-size: 0.9rem;
+	color: var(--text-color);
+}

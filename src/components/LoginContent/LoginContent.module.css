@@ -1,0 +1,67 @@
+.loginSection {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: calc(100vh - 60px);
+	background-color: transparent;
+}
+
+.loginForm {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+	width: 350px;
+	padding: 2rem;
+	border: 1px solid var(--primary-border-color);
+	border-radius: 0.75rem;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+	font-size: 2rem;
+	font-weight: bold;
+	color: var(--primary-title-color);
+	text-align: center;
+}
+
+.loginForm input {
+	padding: 0.5rem;
+	font-size: 1rem;
+	border: 1px solid var(--primary-border-color);
+	background-color: transparent;
+	border-radius: 0.5rem;
+	color: var(--primary-text-color);
+	transition: border-color 0.1s ease;
+}
+
+.loginForm input:hover {
+	border-color: var(--primary-title-color);
+}
+
+.loginForm input:focus-within {
+	border-color: var(--primary-title-color);
+}
+
+.loginForm button {
+	padding: 0.5rem;
+	font-size: 1rem;
+	background-color: transparent;
+	color: white;
+	border: 1px solid var(--primary-title-color);
+	border-radius: 0.5rem;
+	cursor: pointer;
+	transition: background-color 0.1s ease;
+}
+
+.loginForm button:hover {
+	background-color: var(--primary-title-color);
+}
+
+.registerLink {
+	text-align: center;
+	color: var(--text-color);
+}
+
+.registerLink:hover {
+	color: var(--primary-text-color);
+}

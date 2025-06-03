@@ -1,7 +1,7 @@
 import { useState, useMemo } from 'react';
 import { fetchFilteredProducts } from '../services/apiServices/productsService';
 
-export const useProducts = token => {
+export const useProducts = () => {
 	const [products, setProducts] = useState([]);
 	const [loading, setLoading] = useState(false);
 	const [error, setError] = useState(null);
@@ -10,7 +10,7 @@ export const useProducts = token => {
 		setLoading(true);
 		setError(null);
 		try {
-			const data = await fetchFilteredProducts(filter, token, page, size);
+			const data = await fetchFilteredProducts(filter, page, size);
 			setProducts(data);
 		} catch (err) {
 			setError(err);
