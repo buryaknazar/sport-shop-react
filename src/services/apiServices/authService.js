@@ -2,7 +2,7 @@ import axios from 'axios';
 
 const API_BASE_URL = 'http://localhost:8080/api';
 
-export const login = async credentials => {
+const login = async credentials => {
 	try {
 		const response = await axios.post(
 			`${API_BASE_URL}/auth/login`,
@@ -19,3 +19,23 @@ export const login = async credentials => {
 		throw error;
 	}
 };
+
+const register = async userData => {
+	try {
+		const response = await axios.post(
+			`${API_BASE_URL}/auth/register`,
+			userData,
+			{
+				headers: {
+					'Content-Type': 'application/json',
+				},
+			}
+		);
+		return response.data;
+	} catch (error) {
+		console.error('Error during registration:', error);
+		throw error;
+	}
+};
+
+export { login, register };

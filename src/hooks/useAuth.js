@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-import { login } from '../services/apiServices/authService';
+import { login, register } from '../services/apiServices/authService';
 
 export const useAuth = () => {
 	const [loading, setLoading] = useState(false);
@@ -21,8 +21,23 @@ export const useAuth = () => {
 		}
 	};
 
+	const registerUser = async userData => {
+		setLoading(true);
+		setError(null);
+		try {
+			const response = await register(userData);
+			return response;
+		} catch (err) {
+			setError(err);
+			throw err;
+		} finally {
+			setLoading(false);
+		}
+	};
+
 	return {
 		loginUser,
+		registerUser,
 		loading,
 		error,
 	};

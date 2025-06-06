@@ -1,0 +1,67 @@
+.registerSection {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: calc(100vh - 60px);
+	background-color: transparent;
+}
+
+.registerForm {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+	width: 350px;
+	padding: 2rem;
+	border: 1px solid var(--primary-border-color);
+	border-radius: 0.75rem;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+	font-size: 2rem;
+	font-weight: bold;
+	color: var(--primary-title-color);
+	text-align: center;
+}
+
+.registerForm input {
+	padding: 0.5rem;
+	font-size: 1rem;
+	border: 1px solid var(--primary-border-color);
+	background-color: transparent;
+	border-radius: 0.5rem;
+	color: var(--primary-text-color);
+	transition: border-color 0.1s ease;
+}
+
+.registerForm input:hover {
+	border-color: var(--primary-title-color);
+}
+
+.registerForm input:focus-within {
+	border-color: var(--primary-title-color);
+}
+
+.registerForm button {
+	padding: 0.5rem;
+	font-size: 1rem;
+	background-color: transparent;
+	color: white;
+	border: 1px solid var(--primary-title-color);
+	border-radius: 0.5rem;
+	cursor: pointer;
+	transition: background-color 0.1s ease;
+}
+
+.registerForm button:hover {
+	background-color: var(--primary-title-color);
+}
+
+.loginLink {
+	text-align: center;
+	color: var(--text-color);
+}
+
+.loginLink:hover {
+	color: var(--primary-text-color);
+}
