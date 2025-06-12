@@ -1,0 +1,73 @@
+.form {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+	padding: 1rem 2rem;
+	background-color: var(--background-color);
+	color: var(--primary-text-color);
+	border-radius: 8px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+}
+
+.label {
+	display: flex;
+	flex-direction: column;
+	font-weight: 500;
+	color: var(--text-color);
+	font-size: 1rem;
+}
+
+.input {
+	margin-top: 0.25rem;
+	padding: 0.5rem 0.75rem;
+	font-size: 1rem;
+	border: 1.5px solid var(--primary-border-color);
+	border-radius: 6px;
+	background-color: var(--background-color);
+	color: var(--primary-text-color);
+	transition: border-color 0.3s ease;
+}
+
+.input::placeholder {
+	color: var(--search-input-placeholder-color);
+}
+
+.input:hover {
+	border-color: var(--search-input-hover-border-color);
+}
+
+.input:focus {
+	border-color: var(--search-input-focus-border-color);
+	outline: none;
+	box-shadow: 0 0 5px var(--primary-title-color);
+}
+
+.error {
+	color: var(--delete-action-btn-color);
+	font-weight: 600;
+	font-size: 0.9rem;
+	margin-top: -0.5rem;
+}
+
+.submitButton {
+	padding: 0.6rem 1.5rem;
+	font-size: 1rem;
+	color: var(--background-color);
+	background-color: var(--add-action-btn-color);
+	border: none;
+	border-radius: 6px;
+	font-weight: 600;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+	align-self: flex-start;
+}
+
+.submitButton:disabled {
+	opacity: 0.6;
+	cursor: not-allowed;
+}
+
+.submitButton:hover:not(:disabled) {
+	background-color: var(--primary-title-color);
+	color: var(--background-color);
+}

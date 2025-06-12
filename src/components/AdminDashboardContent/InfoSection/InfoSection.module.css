@@ -1,0 +1,36 @@
+.infoSection {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 1rem;
+	background-color: var(--admin-infosection-bg-color);
+	border-radius: 0.2rem;
+	padding: 1rem;
+}
+
+.infoSection .infoGroup {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 0.3rem;
+}
+
+.infoSection .infoGroup .icon {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: var(--primary-text-color);
+}
+
+.infoSection .infoGroup .title {
+	color: var(--primary-text-color);
+	font-weight: bold;
+}
+
+.infoSection .value {
+	color: var(--primary-title-color);
+	font-weight: bold;
+	font-size: 1.7rem;
+}

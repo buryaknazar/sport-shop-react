@@ -1,0 +1,17 @@
+.cartItems {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+	padding: 1rem 0;
+	min-height: 400px;
+	border-bottom: 1px solid var(--primary-border-color);
+}
+
+.cartItemsHeader {
+	display: grid;
+	grid-template-columns: 2fr 1fr 1fr 1fr 40px;
+	align-items: center;
+	color: var(--text-color);
+	border-bottom: 1px solid var(--primary-border-color);
+	padding-bottom: 1rem;
+}

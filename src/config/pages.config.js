@@ -4,8 +4,16 @@ class PageConfig {
 	about = '/about';
 	contact = '/contact';
 	profile = '/profile';
+	cart = '/cart';
+	checkout = '/checkout';
 	login = '/login';
 	register = '/register';
+	admin = '/admin';
+	adminUsers = '/adminUsers';
+	adminCategories = '/adminCategories';
+	adminManufacturers = '/adminManufacturers';
+	adminProducts = '/adminProducts';
+	adminColors = '/adminColors';
 }
 
 export const pagesConfig = new PageConfig();

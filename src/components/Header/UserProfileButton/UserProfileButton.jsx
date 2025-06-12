@@ -53,6 +53,11 @@ const UserProfileButton = () => {
 							<li onClick={() => handleOptionClick(pagesConfig.profile)}>
 								Profile
 							</li>
+							{user.role === 'ADMIN' && (
+								<li onClick={() => handleOptionClick(pagesConfig.admin)}>
+									Dashboard
+								</li>
+							)}
 							<li onClick={() => handleOptionClick('logout')}>Logout</li>
 						</>
 					) : (

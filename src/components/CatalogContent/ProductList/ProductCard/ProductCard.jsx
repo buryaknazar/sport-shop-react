@@ -1,8 +1,24 @@
+import { useCart } from '../../../../context/CartContext';
+
 import styles from './ProductCard.module.css';
 
 import { ShoppingCart, EyeIcon } from 'lucide-react';
 
 const ProductCard = ({ product }) => {
+	const { addItem } = useCart();
+
+	const handleAddToCart = () => {
+		addItem({
+			id: product.id,
+			name: product.name,
+			price: product.price,
+			image: product.imageUrl,
+			quantity: 1,
+		});
+
+		alert(`${product.name} has been added to your cart!`);
+	};
+
 	return (
 		<div className={styles.productCard}>
 			<div className={styles.cardImg}>
@@ -19,7 +35,7 @@ const ProductCard = ({ product }) => {
 			</div>
 
 			<div className={styles.cardActions}>
-				<button className={styles.actionButton}>
+				<button className={styles.actionButton} onClick={handleAddToCart}>
 					<ShoppingCart size={20} />
 				</button>
 

@@ -1,0 +1,12 @@
+.notFoundPage {
+	text-align: center;
+	margin-top: 50px;
+}
+
+.notFoundPage h1 {
+	color: var(--primary-title-color);
+}
+
+.notFoundPage p {
+	color: var(--text-color);
+}

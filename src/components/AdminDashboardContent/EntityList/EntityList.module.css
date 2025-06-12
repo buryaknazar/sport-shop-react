@@ -1,0 +1,49 @@
+.listWrapper {
+	border: 2px solid var(--admin-infosection-bg-color);
+	border-radius: 0.2rem;
+}
+
+.entityListHeader {
+	padding: 1rem 1rem;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.entityListHeader .listTitle {
+	color: var(--primary-title-color);
+	font-size: 1.5rem;
+	margin: 0;
+}
+
+.entityListHeader .link {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: var(--primary-text-color);
+}
+
+.listWrapper .listContainer {
+	width: 100%;
+	height: 300px;
+	overflow-y: scroll;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	gap: 0.5rem;
+	padding: 0.3rem 0.8rem 0.3rem 0.3rem;
+}
+
+.listWrapper .listContainer .listItem {
+	width: 100%;
+	min-height: 50px;
+	padding: 0 1rem;
+	border: 1px solid var(--admin-list-item-border-color);
+	border-radius: 0.2rem;
+	display: flex;
+	align-items: center;
+}
+
+.listItem .name {
+	color: var(--primary-text-color);
+}

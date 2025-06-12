@@ -38,9 +38,21 @@
 	--product-card-btn-border-color: #00bba7;
 	--product-card-btn-hover-text-color: #0f172b;
 
+	--admin-infosection-bg-color: #314158;
+	--admin-list-item-border-color: #00bba7;
+
+	--sidebar-bg-color: #0f172b;
+	--sidebar-border-color: #314158;
+	--sidebar-item-hover-text-color: #00bba7;
+	--sidebar-item-hover-bg-color: #314158;
+
 	--background-color: #0f172b;
 	--primary-text-color: #f8fafc;
 	--primary-title-color: #00bba7;
 	--text-color: #90a1b9;
 	--primary-border-color: #90a1b9;
+	--delete-action-btn-color: #fb2c36;
+	--add-action-btn-color: #4caf50;
+	--edit-action-btn-color: #f0b100;
+	--loader-color: #00bba7;
 }
