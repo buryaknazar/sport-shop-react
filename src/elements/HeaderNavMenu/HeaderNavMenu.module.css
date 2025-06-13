@@ -1,0 +1,60 @@
+.mobileMenuWrapper {
+	display: block;
+	height: 100%;
+}
+
+.mobileMenuWrapper .burgerBtn {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: var(--primary-text-color);
+	cursor: pointer;
+	height: 100%;
+	width: 35px;
+	background-color: transparent;
+	border: 1px solid var(--header-action-button-border-color);
+	border-radius: 0.5rem;
+}
+
+.overlay {
+	position: fixed;
+	top: 0;
+	left: -100%;
+	width: 100vw;
+	height: 100vh;
+	background-color: var(--background-color);
+	z-index: 1000;
+	padding: 1rem;
+	transition: left 0.3s ease;
+}
+
+.overlay.open {
+	left: 0;
+}
+
+.overlay .overlayHeader {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.overlayHeader .closeBtn,
+.overlayHeader .logout {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: var(--primary-text-color);
+	cursor: pointer;
+}
+
+.overlay .menuContainer {
+	width: 100%;
+	padding: 1rem;
+}
+
+.menuContainer .menu {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 1rem;
+}

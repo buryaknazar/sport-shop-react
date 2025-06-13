@@ -5,6 +5,7 @@ import HomePage from '../pages/HomePage';
 import NotFoundPage from '../pages/NotFoundPage';
 import CatalogPage from '../pages/CatalogPage/CatalogPage';
 import CartPage from '../pages/CartPage/CartPage';
+import ProductPage from '../pages/ProductPage/ProductPage';
 import CheckoutPage from '../pages/CheckoutPage/CheckoutPage';
 import LoginPage from '../pages/Authentication/LoginPage';
 import RegisterPage from '../pages/Authentication/RegisterPage';
@@ -24,6 +25,7 @@ const AppRouter = () => {
 				<Route path={pagesConfig.home} element={<HomePage />} />
 				<Route path={pagesConfig.catalog} element={<CatalogPage />} />
 				<Route path={pagesConfig.cart} element={<CartPage />} />
+				<Route path={pagesConfig.productPage} element={<ProductPage />} />
 				<Route path={pagesConfig.checkout} element={<CheckoutPage />} />
 				<Route path={pagesConfig.login} element={<LoginPage />} />
 				<Route path={pagesConfig.register} element={<RegisterPage />} />

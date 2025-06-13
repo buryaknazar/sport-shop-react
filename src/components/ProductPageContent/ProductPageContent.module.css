@@ -1,0 +1,137 @@
+.productPageWrapper {
+	width: 100%;
+	padding: 1rem;
+}
+
+.productHeader {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 2rem;
+}
+
+.productImage {
+	flex: 1 1 300px;
+	max-width: 500px;
+}
+
+.productImage img {
+	width: 100%;
+	height: auto;
+	border-radius: 0.5rem;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+	object-fit: cover;
+}
+
+.productInfo {
+	flex: 1 1 300px;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	gap: 0.75rem;
+}
+
+.productInfo p {
+	color: var(--text-color);
+}
+
+.productInfo p strong {
+	color: var(--primary-title-color);
+}
+
+.productName {
+	font-size: 2rem;
+	font-weight: bold;
+	margin-bottom: 0.5rem;
+	color: var(--primary-title-color);
+}
+
+.productManufacturer,
+.productCategory,
+.productColor,
+.productSize,
+.productPrice {
+	font-size: 1rem;
+}
+
+.productPrice {
+	font-size: 1rem;
+	font-weight: bold;
+}
+
+.actions {
+	flex: 1;
+	display: flex;
+	align-items: flex-end;
+}
+
+.addToCartBtn {
+	padding: 0.75rem 1.5rem;
+	background-color: var(--btn-bg-color);
+	color: white;
+	border: none;
+	border-radius: 8px;
+	cursor: pointer;
+	margin-top: 1rem;
+	font-size: 1rem;
+	transition: background 0.2s ease;
+	width: fit-content;
+}
+
+.addToCartBtn:hover {
+	background-color: var(--btn-hover-bg-color);
+}
+
+.productDescription {
+	margin-top: 2rem;
+}
+
+.productDescription h2 {
+	font-size: 1.5rem;
+	margin-bottom: 0.5rem;
+	color: var(--primary-title-color);
+}
+
+.productDescription p {
+	line-height: 1.6;
+	font-size: 1rem;
+	color: var(--text-color);
+}
+
+.loading {
+	text-align: center;
+	margin-top: 3rem;
+	font-size: 1.5rem;
+}
+
+@media (max-width: 768px) {
+	.productHeader {
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.productImage,
+	.productInfo {
+		width: 100%;
+		max-width: 100%;
+	}
+
+	.productName {
+		font-size: 1.6rem;
+		text-align: center;
+	}
+
+	.productInfo {
+		align-items: center;
+		text-align: center;
+	}
+}
+
+@media (max-width: 480px) {
+	.productName {
+		font-size: 1.4rem;
+	}
+
+	.addToCartBtn {
+		width: 100%;
+	}
+}

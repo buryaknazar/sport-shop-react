@@ -1,3 +1,4 @@
+import { useNavigate } from 'react-router-dom';
 import { useCart } from '../../../../context/CartContext';
 
 import styles from './ProductCard.module.css';
@@ -6,6 +7,7 @@ import { ShoppingCart, EyeIcon } from 'lucide-react';
 
 const ProductCard = ({ product }) => {
 	const { addItem } = useCart();
+	const navigate = useNavigate();
 
 	const handleAddToCart = () => {
 		addItem({
@@ -17,6 +19,10 @@ const ProductCard = ({ product }) => {
 		});
 
 		alert(`${product.name} has been added to your cart!`);
+	};
+
+	const handleDetails = () => {
+		navigate(`/products/${product.id}`);
 	};
 
 	return (
@@ -39,7 +45,7 @@ const ProductCard = ({ product }) => {
 					<ShoppingCart size={20} />
 				</button>
 
-				<button className={styles.actionButton}>
+				<button className={styles.actionButton} onClick={handleDetails}>
 					<EyeIcon size={20} />
 				</button>
 			</div>

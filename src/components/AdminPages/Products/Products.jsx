@@ -4,6 +4,7 @@ import { useAdmin } from '../../../hooks/useAdmin';
 import EntityPage from '../../../elements/EntityPage/EntityPage';
 import ProductAddForm from '../../../elements/EntityForms/Product/ProductAddForm/ProductAddForm';
 import ProductEditForm from '../../../elements/EntityForms/Product/ProductEditForm/ProductEditForm';
+import ProductDeleteForm from '../../../elements/EntityForms/Product/ProductDeleteForm/ProductDeleteForm';
 
 const columnsToShow = [
 	'id',
@@ -22,8 +23,6 @@ const Products = () => {
 		getProductsData();
 	}, []);
 
-	console.log(products);
-
 	return (
 		<section className='container'>
 			<EntityPage
@@ -32,6 +31,7 @@ const Products = () => {
 				columnsToShow={columnsToShow}
 				AddForm={ProductAddForm}
 				EditForm={ProductEditForm}
+				DeleteForm={ProductDeleteForm}
 				onRefresh={getProductsData}
 			></EntityPage>
 		</section>

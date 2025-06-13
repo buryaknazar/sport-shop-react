@@ -82,3 +82,9 @@ input[type='number'] {
 	align-items: center;
 	justify-content: center;
 }
+
+@media (max-width: 768px) {
+	.itemImageContainer {
+		display: none;
+	}
+}

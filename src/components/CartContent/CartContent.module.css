@@ -126,3 +126,12 @@
 	border-color: var(--primary-title-color);
 	color: var(--primary-title-color);
 }
+
+@media (max-width: 1024px) {
+	.cartContent {
+		display: flex;
+		flex-direction: column;
+		padding: 1rem;
+		gap: 1rem;
+	}
+}

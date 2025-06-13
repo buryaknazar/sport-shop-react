@@ -11,10 +11,12 @@ const EntityPage = ({
 	columnsToShow,
 	AddForm,
 	EditForm,
+	DeleteForm,
 	onRefresh,
 }) => {
 	const [isAddOpen, setIsAddOpen] = useState(false);
 	const [editItem, setEditItem] = useState(null);
+	const [deleteItem, setDeleteItem] = useState(null);
 
 	const openAddModal = () => setIsAddOpen(true);
 	const closeAddModal = () => setIsAddOpen(false);
@@ -22,10 +24,14 @@ const EntityPage = ({
 	const openEditModal = item => setEditItem(item);
 	const closeEditModal = () => setEditItem(null);
 
+	const openDeleteModal = item => setDeleteItem(item);
+	const closeDeleteModal = () => setDeleteItem(null);
+
 	const handleSuccess = () => {
 		if (onRefresh) onRefresh();
 		closeAddModal();
 		closeEditModal();
+		closeDeleteModal();
 	};
 
 	return (
@@ -44,6 +50,7 @@ const EntityPage = ({
 					list={list}
 					columnsToShow={columnsToShow}
 					onEditClick={openEditModal}
+					onDeleteClick={openDeleteModal}
 				/>
 			</div>
 
@@ -64,6 +71,16 @@ const EntityPage = ({
 					onOpenChange={setEditItem}
 				>
 					<EditForm entity={editItem} onSuccess={handleSuccess} />
+				</Modal>
+			)}
+
+			{DeleteForm && deleteItem && (
+				<Modal
+					title={`Delete ${title.slice(0, -1)}`}
+					open={!!deleteItem}
+					onOpenChange={setDeleteItem}
+				>
+					<DeleteForm entity={deleteItem} onSuccess={handleSuccess} />
 				</Modal>
 			)}
 		</div>

@@ -2,6 +2,7 @@ import NavMenu from './NavMenu/NavMenu';
 import ProductSearchBar from '../../elements/ProductSearchBar/ProductSearchBar';
 import CartButton from './CartButton/CartButton';
 import UserProfileButton from './UserProfileButton/UserProfileButton';
+import HeaderNavMenu from '../../elements/HeaderNavMenu/HeaderNavMenu';
 
 import styles from './Header.module.css';
 
@@ -20,6 +21,10 @@ const Header = () => {
 				</div>
 
 				<div className={styles.headerActions}>
+					<div className={styles.headerNavMenu}>
+						<HeaderNavMenu />
+					</div>
+
 					<div className={styles.quickSearch}>
 						<ProductSearchBar />
 					</div>

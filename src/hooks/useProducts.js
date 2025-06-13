@@ -1,8 +1,12 @@
 import { useState, useMemo } from 'react';
-import { fetchFilteredProducts } from '../services/apiServices/productsService';
+import {
+	fetchFilteredProducts,
+	fetchProductById,
+} from '../services/apiServices/productsService';
 
 export const useProducts = () => {
 	const [products, setProducts] = useState([]);
+	const [product, setProduct] = useState(null);
 	const [loading, setLoading] = useState(false);
 	const [error, setError] = useState(null);
 
@@ -19,15 +23,35 @@ export const useProducts = () => {
 		}
 	};
 
+	const getProductById = async id => {
+		setLoading(true);
+		setError(null);
+		try {
+			const data = await fetchProductById(id);
+			setProduct(data);
+		} catch (err) {
+			setError(err);
+		} finally {
+			setLoading(false);
+		}
+	};
+
 	const resetProducts = () => {
 		setProducts([]);
+	};
+
+	const resetProduct = () => {
+		setProduct(null);
 	};
 
 	return useMemo(
 		() => ({
 			products,
+			product,
 			fetchProducts,
+			getProductById,
 			resetProducts,
+			resetProduct,
 			loading,
 			error,
 		}),

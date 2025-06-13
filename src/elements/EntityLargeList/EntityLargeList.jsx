@@ -6,7 +6,12 @@ const getNestedValue = (obj, path) => {
 	}, obj);
 };
 
-const EntityLargeList = ({ list, columnsToShow, onEditClick }) => {
+const EntityLargeList = ({
+	list,
+	columnsToShow,
+	onEditClick,
+	onDeleteClick,
+}) => {
 	if (!Array.isArray(list) || list.length === 0) {
 		return <p>No data found</p>;
 	}
@@ -37,7 +42,12 @@ const EntityLargeList = ({ list, columnsToShow, onEditClick }) => {
 								>
 									Edit
 								</button>
-								<button className={styles.deleteBtn}>Delete</button>
+								<button
+									className={styles.deleteBtn}
+									onClick={() => onDeleteClick && onDeleteClick(item)}
+								>
+									Delete
+								</button>
 							</td>
 						</tr>
 					))}

@@ -1,5 +1,7 @@
 import Sidebar from '../elements/Sidebar/Sidebar';
 
+import styles from '../styles/AdminLayout.module.css';
+
 import {
 	Home,
 	LayoutDashboard,
@@ -38,7 +40,7 @@ const AdminLayout = ({ children }) => {
 	return (
 		<>
 			<Sidebar items={sidebarItems} />
-			<main>{children}</main>
+			<main className={styles.main}>{children}</main>
 		</>
 	);
 };

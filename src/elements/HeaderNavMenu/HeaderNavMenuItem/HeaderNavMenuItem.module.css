@@ -1,0 +1,36 @@
+.navMenuItem {
+	position: relative;
+	display: block;
+}
+
+.navLink {
+	color: var(--nav-menu-item-text-color);
+	text-decoration: none;
+	font-size: 1rem;
+	font-weight: var(--nav-menu-item-font-weight);
+	transition: color 0.2s ease;
+	padding: 0.5rem;
+	display: block;
+	white-space: nowrap;
+}
+
+.navLink::before {
+	content: '';
+	width: 100%;
+	height: 2px;
+	position: absolute;
+	left: 50%;
+	bottom: 0;
+	background-color: var(--nav-menu-item-hover-underline-color);
+	transform: translateX(-50%) scaleX(0);
+	transform-origin: center;
+	transition: transform 0.3s ease;
+}
+
+.navLink.active {
+	color: var(--nav-menu-item-active-text-color);
+}
+
+.navLink.active::before {
+	transform: translateX(-50%) scaleX(1);
+}

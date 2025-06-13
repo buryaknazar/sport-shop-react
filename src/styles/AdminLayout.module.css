@@ -1,0 +1,5 @@
+.main {
+	position: absolute;
+	width: calc(100% - 78px);
+	left: 78px;
+}

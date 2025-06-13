@@ -20,3 +20,14 @@ export const fetchFilteredProducts = async (filter, page = 0, size = 10) => {
 		throw error;
 	}
 };
+
+export const fetchProductById = async id => {
+	try {
+		const response = await axios.get(`${API_BASE_URL}/products/${id}`);
+		console.log(response);
+		return response.data;
+	} catch (error) {
+		console.error('Error fetching product by id:', error);
+		throw error;
+	}
+};

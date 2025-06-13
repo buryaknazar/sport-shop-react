@@ -11,7 +11,7 @@ import { pagesConfig } from '../../../config/pages.config.js';
 
 const UserProfileButton = () => {
 	const [open, setOpen] = useState(false);
-	const { user, setUser } = useUser();
+	const { user, logout } = useUser();
 	const menuRef = useRef(null);
 	const navigate = useNavigate();
 
@@ -29,8 +29,7 @@ const UserProfileButton = () => {
 	const handleOptionClick = action => {
 		setOpen(false);
 		if (action === 'logout') {
-			localStorage.removeItem('token');
-			setUser(null);
+			logout();
 			navigate(pagesConfig.home);
 			return;
 		}

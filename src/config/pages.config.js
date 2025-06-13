@@ -5,6 +5,7 @@ class PageConfig {
 	contact = '/contact';
 	profile = '/profile';
 	cart = '/cart';
+	productPage = '/products/:id';
 	checkout = '/checkout';
 	login = '/login';
 	register = '/register';
