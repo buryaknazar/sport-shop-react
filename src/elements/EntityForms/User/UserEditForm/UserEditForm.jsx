@@ -7,6 +7,9 @@ const UserEditForm = ({ entity, onSuccess }) => {
 	const [username, setUsername] = useState(entity.username || '');
 	const [email, setEmail] = useState(entity.email || '');
 	const [role, setRole] = useState(entity.role || 'USER');
+	const [avatarImageUrl, setAvatarImageUrl] = useState(
+		entity.avatarImageUrl || ''
+	);
 	const [localError, setLocalError] = useState(null);
 
 	const handleSubmit = async e => {
@@ -19,7 +22,7 @@ const UserEditForm = ({ entity, onSuccess }) => {
 		}
 
 		try {
-			await editUser({ id: entity.id, username, email, role });
+			await editUser({ id: entity.id, username, email, role, avatarImageUrl });
 			if (onSuccess) onSuccess();
 		} catch (err) {
 			setLocalError(err.message || 'Failed to update user');
@@ -39,6 +42,7 @@ const UserEditForm = ({ entity, onSuccess }) => {
 					disabled={loading}
 				/>
 			</label>
+
 			<label className={styles.label}>
 				Email:
 				<input
@@ -50,6 +54,7 @@ const UserEditForm = ({ entity, onSuccess }) => {
 					disabled={loading}
 				/>
 			</label>
+
 			<label className={styles.label}>
 				Role:
 				<select
@@ -61,6 +66,18 @@ const UserEditForm = ({ entity, onSuccess }) => {
 					<option value='USER'>USER</option>
 					<option value='ADMIN'>ADMIN</option>
 				</select>
+			</label>
+
+			<label className={styles.label}>
+				Avatar Image Url:
+				<input
+					type='text'
+					value={avatarImageUrl}
+					onChange={e => setAvatarImageUrl(e.target.value)}
+					required
+					className={styles.input}
+					disabled={loading}
+				/>
 			</label>
 			{(localError || error) && (
 				<p className={styles.error}>{localError || error}</p>

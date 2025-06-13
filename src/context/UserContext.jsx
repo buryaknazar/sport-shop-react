@@ -17,6 +17,7 @@ export const UserProvider = ({ children }) => {
 					username: userData.sub,
 					email: userData.email,
 					role: userData.role,
+					avatarImageUrl: userData.avatarImageUrl,
 				});
 				setToken(storedToken);
 			} catch (err) {

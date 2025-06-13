@@ -8,6 +8,7 @@ const UserAddForm = ({ onSuccess }) => {
 	const [email, setEmail] = useState('');
 	const [password, setPassword] = useState('');
 	const [role, setRole] = useState('USER');
+	const [avatarImageUrl, setAvatarImageUrl] = useState('');
 	const [localError, setLocalError] = useState(null);
 
 	const handleSubmit = async e => {
@@ -20,7 +21,7 @@ const UserAddForm = ({ onSuccess }) => {
 		}
 
 		try {
-			await createUser({ username, email, password, role });
+			await createUser({ username, email, password, role, avatarImageUrl });
 			setUsername('');
 			setEmail('');
 			setPassword('');
@@ -44,6 +45,7 @@ const UserAddForm = ({ onSuccess }) => {
 					disabled={loading}
 				/>
 			</label>
+
 			<label className={styles.label}>
 				Email:
 				<input
@@ -66,6 +68,7 @@ const UserAddForm = ({ onSuccess }) => {
 					disabled={loading}
 				/>
 			</label>
+
 			<label className={styles.label}>
 				Role:
 				<select
@@ -77,6 +80,18 @@ const UserAddForm = ({ onSuccess }) => {
 					<option value='USER'>USER</option>
 					<option value='ADMIN'>ADMIN</option>
 				</select>
+			</label>
+
+			<label className={styles.label}>
+				Avatar Image Url:
+				<input
+					type='text'
+					value={avatarImageUrl}
+					onChange={e => setAvatarImageUrl(e.target.value)}
+					required
+					className={styles.input}
+					disabled={loading}
+				/>
 			</label>
 			{(localError || error) && (
 				<p className={styles.error}>{localError || error}</p>

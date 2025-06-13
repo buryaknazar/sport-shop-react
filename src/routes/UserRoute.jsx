@@ -5,7 +5,7 @@ import LoadingPage from '../pages/LoadingPage';
 
 import { pagesConfig } from '../config/pages.config';
 
-export const ProtectedRoute = ({ children, requiredRole }) => {
+export const UserRoute = ({ children }) => {
 	const { user, isLoading } = useUser();
 
 	if (isLoading) {
@@ -14,10 +14,6 @@ export const ProtectedRoute = ({ children, requiredRole }) => {
 
 	if (!user) {
 		return <Navigate to={pagesConfig.login} replace />;
-	}
-
-	if (requiredRole && user.role !== requiredRole) {
-		return <Navigate to={pagesConfig.home} replace />;
 	}
 
 	return children;

@@ -1,5 +1,6 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { ProtectedRoute } from './ProtectedRoute';
+import { UserRoute } from './UserRoute';
 
 import HomePage from '../pages/HomePage';
 import NotFoundPage from '../pages/NotFoundPage';
@@ -15,6 +16,7 @@ import UsersPage from '../pages/Admin/EntitiesPages/UsersPage';
 import ManufacturersPage from '../pages/Admin/EntitiesPages/ManufacturersPage';
 import ColorsPage from '../pages/Admin/EntitiesPages/ColorsPage';
 import ProductsPage from '../pages/Admin/EntitiesPages/ProductsPage';
+import ProfilePage from '../pages/ProfilePage/ProfilePage';
 
 import { pagesConfig } from '../config/pages.config';
 
@@ -30,6 +32,15 @@ const AppRouter = () => {
 				<Route path={pagesConfig.login} element={<LoginPage />} />
 				<Route path={pagesConfig.register} element={<RegisterPage />} />
 				<Route path='*' element={<NotFoundPage />} />
+
+				<Route
+					path={pagesConfig.profile}
+					element={
+						<UserRoute>
+							<ProfilePage />
+						</UserRoute>
+					}
+				/>
 
 				<Route
 					path={pagesConfig.admin}
