@@ -5,6 +5,11 @@
 	justify-content: space-around;
 }
 
+.productListContainer.flexCenter {
+	display: flex;
+	justify-content: center;
+}
+
 .productItem {
 	display: flex;
 	justify-content: center;

@@ -4,7 +4,7 @@ import styles from './ProductList.module.css';
 
 const ProductList = ({ products }) => {
 	return (
-		<div className={styles.productListContainer}>
+		<div className={`${styles.productListContainer} ${products.length === 0 ? styles.flexCenter : ''}`}>
 			{products.length > 0 ? (
 				products.map(product => (
 					<div key={product.id} className={styles.productItem}>
